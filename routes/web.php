@@ -5,4 +5,5 @@ use App\Http\Controllers\StudentController;
 
 
 Route::get('/',[StudentController::class,'index'])->name('index');
-Route::post('/',[StudentController::class,'create']);
+Route::post('/',[StudentController::class,'create'])->name('create');
+Route::get('/edit/{id}',[StudentController::class,'edit'])->name('edit');
