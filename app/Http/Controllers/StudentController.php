@@ -75,7 +75,12 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::table('student')->where('id',$id)->update([
+            'name'=>$request->name,
+            'city'=>$request->city,
+            'marks'=>$request->marks,
+        ]);
+        return redirect(route('index'))->with('status','Updated Successfully!!');
     }
 
     /**
@@ -86,6 +91,7 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('student')->where('id',$id)->delete();
+        return redirect(route('index'))->with('status','Deleted Successfully!!');
     }
 }
