@@ -36,7 +36,7 @@
             </div>
        
     
-    <div class="col-sm-6 shadow bg-success">
+    <div class="col-sm-6 shadow bg-success ">
       <h3>Show List of All Students Info</h3>
       <table class="table table-hover">
         <thead>
